@@ -1,0 +1,41 @@
+/* pages/search/search.wxss */
+@import '/pages/templates/stars-templates/stars-templates.wxss';
+
+.search{
+  background: #42bd56;
+  padding: 20rpx 30rpx;
+}
+.search-content{
+  display: flex;
+  padding: 6rpx;
+  background: #fff;
+  border-radius: 10rpx;
+}
+.search-content view{
+  line-height: 60rpx;
+  padding-left: 10rpx;
+
+}
+.search-content input{
+  height: 60rpx;
+  padding-left: 10rpx;
+  color: #ccc;
+  font-size: 28rpx;
+
+}
+.search-main{
+  padding: 20rpx;
+}
+.main-item{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.item-img{
+  width: 230rpx;
+  height: 330rpx;
+}
+.search-stars{
+  display: flex;
+  
+}
+

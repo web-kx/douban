@@ -1,0 +1,60 @@
+<!--pages/detail/detail.wxml-->
+<import src='/pages/templates/stars-templates/stars-templates.wxml' />
+
+<view class="detail-header">
+	<view class="header-img">
+		<image src="{{large}}"></image>
+	</view>
+	<view class="header-countent">
+		<view class="content-name overflow-name">{{title}}</view>
+		<view class="content-list">
+			<text
+       wx:for="{{genres}}"
+       wx:key="{{index}}"
+     >
+			{{item}}/
+			</text>
+			<text
+       wx:for="{{countreies}}"
+       wx:key="{{index}}"
+     >
+			{{item}}/
+			</text>
+			<text>
+			{{year}}年上映
+			</text>
+		</view>
+	</view>
+</view>
+
+<view class="rating">
+	<view class="rating-title">评分</view>
+	<view>
+		<view class="rating-average">{{rating.average}}</view>
+		<view class="rating-stars">
+    <template is="stars" data="{{item}}"></template>
+    </view>
+	</view>
+</view>
+
+<view class="main">
+	<view class="main-title">简介</view>
+	<view class="main-content">{{summary}}</view>
+</view>
+
+<view class="per">
+	<view class="per-title">影人</view>
+	<scroll-view scroll-x="true">
+		<view class="per-content">
+			<!-- per-list 这是一个循环的 -->
+			<view 
+        class="per-list"
+        wx:for="{{casts}}"
+        wx:key="{{index}}"
+       >
+				<image src="{{item.avatars.large}}"></image>
+				<view>{{item.name}}</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
